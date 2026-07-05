@@ -1,7 +1,7 @@
 export default function robots() {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://undangan-khitanan.vercel.app/sitemap.xml",
-    host: "https://undangan-khitanan.vercel.app",
+    sitemap: "https://khitanan.pintuweb.com/sitemap.xml",
+    host: "https://khitanan.pintuweb.com",
   };
 }
