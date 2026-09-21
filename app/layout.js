@@ -24,7 +24,7 @@ const body = Nunito({
 const __jsonld = {"@context":"https://schema.org","@type":"Event","name":"Khitanan Fauzan","description":"Undangan khitanan digital"};
 
 export const metadata = {
-  metadataBase: new URL("https://khitanan.pintuweb.com"),
+  metadataBase: new URL("https://undangan-khitanan-theta.vercel.app"),
   title: "Undangan Khitanan Digital — Kapten Fauzan",
   description: "Undangan khitanan digital bertema komik pahlawan super yang seru. Rayakan keberanian sang jagoan kecil bersama keluarga & sahabat.",
   applicationName: "Undangan Digital",
@@ -32,11 +32,11 @@ export const metadata = {
   authors: [{ name: "Undangan Digital" }],
   creator: "Undangan Digital",
   publisher: "Undangan Digital",
-  alternates: { canonical: "https://khitanan.pintuweb.com" },
+  alternates: { canonical: "https://undangan-khitanan-theta.vercel.app" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://khitanan.pintuweb.com",
+    url: "https://undangan-khitanan-theta.vercel.app",
     siteName: "Undangan Digital",
     title: "Undangan Khitanan Digital — Kapten Fauzan",
     description: "Undangan khitanan digital bertema komik pahlawan super yang seru. Rayakan keberanian sang jagoan kecil bersama keluarga & sahabat.",
