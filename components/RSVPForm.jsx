@@ -2,7 +2,11 @@
 import { useState } from 'react';
 import { Check } from 'lucide-react';
 
-// Konfirmasi kehadiran gaya komik (data lokal/dummy).
+// Konfirmasi kehadiran gaya komik. Ini undangan contoh: data tidak dikirim ke mana pun.
+const PESAN_URL =
+  'https://wa.me/6281339908765?text=' +
+  encodeURIComponent('Halo PintuWeb, saya mau pesan undangan khitanan digital seperti contoh Kapten Fauzan.');
+
 export default function RSVPForm({ onSubmit }) {
   const [form, setForm] = useState({ name: '', attendance: 'hadir', guests: 1 });
   const [done, setDone] = useState(false);
@@ -30,7 +34,17 @@ export default function RSVPForm({ onSubmit }) {
               <Check size={26} />
             </div>
             <p className="mt-4 font-display text-2xl text-ink">Sip, {form.name}!</p>
-            <p className="mt-1 text-sm font-semibold text-muted">Konfirmasimu sudah diterima Sang Jagoan.</p>
+            <p className="mt-1 text-sm font-semibold text-muted">
+              Psst, ini undangan contoh, jadi konfirmasimu tidak benar-benar terkirim ke Sang Jagoan.
+            </p>
+            <a
+              href={PESAN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm font-bold text-rose underline underline-offset-2 hover:text-ink"
+            >
+              Pesan undangan seperti ini
+            </a>
           </div>
         ) : (
           <form onSubmit={submit} className="comic-border comic-shadow mt-8 space-y-4 bg-cream p-6 text-left">

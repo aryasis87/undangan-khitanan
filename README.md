@@ -1,5 +1,11 @@
 # Undangan Digital — Khitanan ("Petualangan Jagoan Kecil")
 
+**Demo live:** https://undangan-khitanan-theta.vercel.app
+
+![Tangkapan layar](public/og.jpg)
+
+> Undangan contoh dengan data fiktif. Formulir RSVP hanya demo dan tidak mengirim data.
+
 Konsep **komik superhero** — sengaja dibuat beda STRUKTUR dari varian lain (bukan gulir-section undangan biasa):
 
 - **ComicCover** — sampul ala buku komik ("Episode Spesial", tombol *Mulai Misi*)
@@ -18,3 +24,7 @@ Gaya visual: panel bergaris tebal (`comic-border`), bayangan keras (`comic-shado
 npm install && npm run dev
 ```
 Semua konten di **`lib/data.js`** (objek `hero`, `mission`, `checkpoints`).
+
+---
+
+Bagian dari koleksi 8 undangan digital di [PortalUndangan](https://portal-undangan-eta.vercel.app). Dibuat oleh [PintuWeb](https://pintuweb.com), jasa pembuatan website.
