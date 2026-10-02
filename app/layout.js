@@ -21,7 +21,7 @@ const body = Nunito({
   display: 'swap',
 });
 
-const __jsonld = {"@context":"https://schema.org","@type":"Event","name":"Khitanan Fauzan","description":"Undangan khitanan digital"};
+const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Undangan Khitanan Digital — Kapten Fauzan","description":"Contoh undangan khitanan digital bergaya komik: kartu jagoan, peta petualangan, hitung mundur, RSVP, dan musik latar.","inLanguage":"id"};
 
 export const metadata = {
   metadataBase: new URL("https://undangan-khitanan-theta.vercel.app"),

@@ -20,7 +20,7 @@ export default function HeroPanel() {
       >
         {/* Balon ucapan */}
         <div className="comic-border comic-shadow-sm relative mx-auto mb-6 max-w-xs bg-cream px-5 py-3">
-          <p className="font-script text-xl text-rose">&ldquo;{opening.battlecry}&rdquo;</p>
+          <p className="font-script text-xl uppercase text-rose">&ldquo;{opening.battlecry}&rdquo;</p>
           <span className="absolute -bottom-3 left-10 h-4 w-4 rotate-45 border-b-4 border-r-4 border-ink bg-cream" />
         </div>
 

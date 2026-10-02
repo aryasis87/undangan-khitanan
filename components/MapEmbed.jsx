@@ -21,6 +21,7 @@ export default function MapEmbed() {
           />
         </div>
         <p className="mt-4 font-bold text-ink">{location.label}</p>
+        {location.note && <p className="mt-1 text-xs font-bold text-muted">{location.note}</p>}
         <a
           href={location.mapLink}
           target="_blank"

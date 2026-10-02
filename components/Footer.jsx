@@ -1,7 +1,8 @@
 'use client';
+import Link from 'next/link';
 import { Share2 } from 'lucide-react';
 import config from '@/lib/data';
-import { whatsappShareUrl } from '@/lib/utils';
+import { invitationUrl, whatsappShareUrl } from '@/lib/utils';
 
 // Penutup komik: panel "TAMAT".
 export default function Footer() {
@@ -10,7 +11,7 @@ export default function Footer() {
   const share = () => {
     const text = `Undangan Khitanan ${hero.alias}`;
     if (typeof navigator !== 'undefined' && navigator.share) {
-      navigator.share({ title: text, url: window.location.href }).catch(() => {});
+      navigator.share({ title: text, url: invitationUrl() }).catch(() => {});
     } else {
       window.open(whatsappShareUrl(text), '_blank', 'noopener');
     }
@@ -28,15 +29,24 @@ export default function Footer() {
           TAMAT
         </h2>
 
-        <p className="font-script text-2xl text-cream">{hero.alias}</p>
+        <p className="font-script text-2xl uppercase text-cream">{hero.alias}</p>
         <p className="mt-1 font-bold text-gold">{footer.hashtag}</p>
 
         <button
           onClick={share}
           className="comic-border comic-shadow-sm mt-7 inline-flex items-center gap-2 bg-gold px-6 py-3 font-display text-xl text-ink transition hover:bg-cream"
         >
-          <Share2 size={16} /> Bagikan Petualangan
+          <Share2 size={16} aria-hidden="true" /> Bagikan Petualangan
         </button>
+
+        {config.music.enabled && (
+          <p className="mt-8 text-xs font-bold text-cream/80">
+            Musik: {config.music.title} · {config.music.credit}
+          </p>
+        )}
+        <p className="mt-2 text-xs font-bold text-cream/80">
+          <Link href="/kirim" className="underline underline-offset-4 hover:text-gold">Kirim undangan ke pasukan</Link>
+        </p>
       </div>
     </footer>
   );

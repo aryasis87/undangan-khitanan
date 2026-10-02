@@ -31,10 +31,10 @@ export default function WishesForm() {
         </h2>
 
         <form onSubmit={submit} className="comic-border comic-shadow mx-auto mt-8 max-w-md space-y-3 bg-blush p-5 text-left">
-          <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Nama Kamu" className={field} required />
-          <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Tulis semangat & doa..." rows={3} className={`${field} resize-none`} required />
+          <input aria-label="Nama kamu" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Nama Kamu" className={field} required />
+          <textarea aria-label="Pesan semangat dan doa" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Tulis semangat & doa..." rows={3} className={`${field} resize-none`} required />
           <button type="submit" className="comic-border comic-shadow-sm inline-flex items-center gap-2 bg-rose-deep px-5 py-2.5 font-display text-lg text-cream transition hover:bg-ink">
-            <Send size={15} /> Tempel!
+            <Send size={15} aria-hidden="true" /> Tempel!
           </button>
         </form>
 

@@ -35,11 +35,12 @@ export default function HeroStats() {
               <div className="flex justify-between text-xs font-extrabold uppercase">
                 <span>{s.label}</span><span>{s.value}</span>
               </div>
-              <div className="comic-border mt-1 h-4 bg-cream">
+              <div className="comic-border mt-1 h-4 overflow-hidden bg-cream" role="meter" aria-label={s.label} aria-valuenow={s.value} aria-valuemin={0} aria-valuemax={100}>
+                {/* scaleX pada elemen selebar penuh: elemen berlebar 0 tidak terdeteksi IntersectionObserver */}
                 <motion.div
-                  className="h-full bg-rose"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${s.value}%` }}
+                  className="h-full w-full origin-left bg-rose"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: s.value / 100 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.9, ease: 'easeOut' }}
                 />
@@ -52,7 +53,7 @@ export default function HeroStats() {
         <div className="mt-5 flex flex-wrap gap-2">
           {hero.powers.map((p) => (
             <span key={p} className="comic-border inline-flex items-center gap-1 bg-blush px-2.5 py-1 text-xs font-bold text-ink">
-              <Sparkles size={12} /> {p}
+              <Sparkles size={12} aria-hidden="true" /> {p}
             </span>
           ))}
         </div>
